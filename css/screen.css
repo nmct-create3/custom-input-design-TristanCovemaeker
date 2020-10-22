@@ -646,10 +646,6 @@ input::placeholder {
     margin-right: var(--global-whitespace-sm);
 }
 
-.c-option--hidden:checked + .c-custom-option {
-    
-}
-
 .c-option--hidden:checked + .c-custom-option .c-custom-option__symbol {
     opacity: 1;
     transition: opacity 300ms, transform 1s;
@@ -763,6 +759,53 @@ input::placeholder {
 .c-button:active {
     background-color: var(--global-color-alpha-dark);
     box-shadow: none;
+}
+
+/*
+    Component: Custom Toggle
+*/
+.c-custom-toggle {
+    display: flex;
+    align-items: center;
+}
+
+.c-custom-toggle__fake-input {
+
+    display: block;
+    height: 24px;
+    width: 48px;
+    border: var(--global-borderWidth) solid var(--global-input-borderColor);
+    border-radius: 24px;
+    margin-right: 16px;
+    background-color: #F5F6FA;
+}
+
+.c-custom-toggle__fake-input::after {
+    content: '';
+    display: block;
+    height: 22px;
+    width: 22px;
+    background-color: white;
+    border-radius: 100%;
+    box-shadow: 0px 1px 3px #00000029;
+    transition: all var(--global-transitionTiming-alpha)
+}
+
+.c-option--hidden:checked + .c-custom-toggle .c-custom-toggle__fake-input::after {
+    transform: translateX(24px);
+
+}
+
+.c-option--hidden:checked + .c-custom-toggle .c-custom-toggle__fake-input {
+    background-color: var(--global-color-alpha);
+    border-color: var(--global-color-alpha);
+    transition: ease 300ms;
+}
+
+.c-custom-toggle:focus .c-custom-toggle__fake-input,
+.c-custom-toggle:active .c-custom-toggle__fake-input {
+    border-color: var(--global-input-focus-borderColor);
+    box-shadow: var(--global-input-boxShadow);
 }
 
 /*------------------------------------*\
