@@ -822,6 +822,24 @@ input::placeholder {
     width: 100%;
 }
 
+/*
+    Component: Custom Select
+*/
+
+.c-custom-select {
+    display: block;
+}
+
+.c-custom-select__symbol {
+    height: 24px;
+    width: 24px;
+    fill: #B5B6C0;
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    pointer-events: none;
+}
+
 /*------------------------------------*\
 #UTILITIES
 \*------------------------------------*/
