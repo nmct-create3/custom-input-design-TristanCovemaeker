@@ -808,6 +808,20 @@ input::placeholder {
     box-shadow: var(--global-input-boxShadow);
 }
 
+.c-toggle-list__item + .c-toggle-list__item {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: var(--global-borderWidth) solid var(--global-input-borderColor);
+}
+
+.c-custom-toggle--inverted {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-right: 0px;
+    width: 100%;
+}
+
 /*------------------------------------*\
 #UTILITIES
 \*------------------------------------*/
