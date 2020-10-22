@@ -646,6 +646,66 @@ input::placeholder {
     margin-right: var(--global-whitespace-sm);
 }
 
+.c-option--hidden:checked + .c-custom-option {
+    
+}
+
+.c-option--hidden:checked + .c-custom-option .c-custom-option__symbol {
+    opacity: 1;
+    transition: opacity 300ms, transform 1s;
+    transition-timing-function: ease;
+}
+
+.c-custom-option {
+    display: flex;
+}
+
+.c-custom-option__fake-input {
+    display: flex;
+    height: 16px;
+    width: 16px;
+    border: var(--global-borderWidth) solid var(--global-input-backgroundColor);
+    margin-right: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.c-custom-option:hover  .c-custom-option__fake-input {
+    border-color: var(--global-input-hover-borderColor);
+}
+
+.c-custom-option:focus .c-custom-option__fake-input,
+.c-custom-option:active .c-custom-option__fake-input {
+    border-color: var(--global-input-focus-borderColor);
+    box-shadow: var(--global-input-boxShadow);
+}
+
+.c-custom-option__fake-input--checkbox {
+    border-radius: var(--global-borderRadius);
+}
+
+.c-custom-option__fake-input--radio {
+    border-radius: 100%;
+}
+
+.c-custom-option__symbol {
+    opacity: 0;
+    display: block;
+}
+
+.c-custom-option__fake-input--checkbox .c-custom-option__symbol {
+    height: 10px;
+    width: 10px;
+    fill: var(--global-color-alpha);
+}
+
+.c-custom-option__fake-input--radio .c-custom-option__symbol {
+    height: 6px;
+    width: 6px;
+    background-color: var(--global-color-alpha);
+    border-radius: 100%;
+}
+
 /*
     Component: Label
     ---
